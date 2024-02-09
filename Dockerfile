@@ -4,6 +4,6 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY ./ /app/
-RUN gcc src/main.c -o db
+RUN gcc -I /app/ -o db ./src/main.c ./src/inputBuffer.c ./src/row.c ./src/pager.c ./src/table.c
 
-CMD ["/app/db"]
+CMD ["/app/db", "users"]
