@@ -13,7 +13,7 @@ typedef struct {
     uint32_t num_rows;
 } Table;
 
-void* row_slot(Table* table, uint32_t row_num);
+void* cursor_value(Table* table, uint32_t row_num);
 
 Table* open_db(const char* filename);
 
